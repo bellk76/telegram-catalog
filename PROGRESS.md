@@ -14,16 +14,14 @@
 | 4 | Next.js каталог + TMA | принят (APPROVE после исправлений) |
 | 5 | Инфраструктура compose, Dockerfiles, миграции, MinIO init | принят (APPROVE) |
 | 6 | Публичный HTTPS, webhook, реальная проверка TMA | принят: `/start`, TMA, фото и файл проверены пользователем |
-| 7 | Финальное ревью, полный прогон, push в GitHub | в работе: код готов, остались финальный прогон и push |
+| 7 | Финальное ревью, полный прогон, push в GitHub | принят: commit 94412fa, push выполнен |
 
 ## Текущее состояние кода
 
-- Репозиторий: `D:\OpenCode\telegram-catalog`, git есть, коммитов нет, remote не настроен.
-  Всё untracked: `.gitignore`, `.env.example`, `.gitattributes`, `.dockerignore`, `AGENTS.md`,
-  `README.md`, `PROGRESS.md`, `compose.yaml`, `api/`, `bot/`, `web/`, `deploy/`.
-  `.env` игнорируется.
+- Репозиторий: `D:\OpenCode\telegram-catalog`, commit `94412fa`, remote `origin`,
+  push в `https://github.com/bellk76/telegram-catalog` выполнен. `.env` игнорируется.
 - GitHub: публичный `bellk76/telegram-catalog`. Git identity локально: `bellk76` /
-  `299753221+bellk76@users.noreply.github.com`. Коммит/push — только этап 7.
+  `299753221+bellk76@users.noreply.github.com`.
 - Архитектура: один публичный origin — web. `/api/*` → API, `/telegram/*` → бот.
   API и MinIO наружу не публикуются. Изображения API проксирует из MinIO.
 - Этап 6: публичный HTTPS через SSH-туннель localhost.run
