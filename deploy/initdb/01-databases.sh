@@ -1,0 +1,7 @@
+#!/bin/sh
+set -e
+
+psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "$POSTGRES_DB" <<EOF
+CREATE DATABASE "${POSTGRES_DB}_test" OWNER "$POSTGRES_USER";
+CREATE DATABASE "${POSTGRES_DB}_migrate" OWNER "$POSTGRES_USER";
+EOF
